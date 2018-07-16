@@ -812,20 +812,15 @@ footer {
     z-index: -4000;
 }
 
-
-/* .slideract .vid {
-    width: 100%;
-    height: auto;
-    position: absolute;
-    z-index: -10000;} */
-
-.sea>p {
+.sea {
     font-size: 1em;
     font-weight: 400;
     font-family: "lato";
     padding-top: 1%;
+    margin: 0 20%;
     text-align: center;
     color: #fff;
+    text-shadow: 3px 3px 2px #000;
 }
 
 .slideract>p {

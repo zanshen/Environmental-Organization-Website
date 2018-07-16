@@ -636,6 +636,16 @@
         margin: 5% auto;
         width: 60%;
     }
+    .sea {
+        font-size: .8em;
+        font-weight: 400;
+        font-family: "lato";
+        padding-top: 1%;
+        margin: 0 20%;
+        text-align: center;
+        color: #fff;
+        text-shadow: 3px 3px 2px #000;
+    }
     .slideract {
         position: relative;
         background-image: url(../images/african-3382795_1920.jpg);
