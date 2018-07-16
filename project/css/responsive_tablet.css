@@ -1,0 +1,830 @@
+    @media only screen and (min-width: 601px) {
+        @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700|Merriweather:300,400,700');
+        /* reset  css browser*/
+        * {
+            border: 0;
+            margin: 0;
+            box-sizing: border-box;
+            padding: 0;
+            font-family: "lato", "Merriweather", Arial, Helvetica, sans-serif;
+        }
+        body {
+            width: 100%;
+            overflow-x: hidden;
+            height: 100%;
+        }
+        .container-nav {
+            background: #026953;
+            margin: 0 auto;
+            height: auto;
+        }
+        ul {
+            list-style: none;
+        }
+        li {
+            display: inline-block;
+            padding-top: 5px;
+            padding-left: 5px;
+            padding-right: 5px;
+            padding-bottom: 5px;
+        }
+        nav>ul>li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: 400;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        #logo {
+            margin: 5px;
+            float: left;
+            width: 25%;
+            height: 80px;
+            background: url(../images/CCE_logoBW.svg) no-repeat center;
+            display: block;
+        }
+        nav {
+            float: none;
+            padding: 10px;
+            margin-top: -4%;
+            font-family: 'lato', sans-serif;
+        }
+        nav>ul>li a.active {
+            border: 2px solid #fff;
+            padding: 5px;
+        }
+        nav>ul>li a:hover,
+        nav>ul>li a:focus {
+            outline: none;
+        }
+        nav>ul>li a::before,
+        nav>ul>li a::after {
+            display: inline-block;
+            opacity: 0;
+            transition: transform 0.6s, opacity 0.2s;
+            -webkit-transition: -webkit-transform 0.6s, opacity 0.2s;
+            -moz-transition: -moz-transform 0.6s, opacity 0.2s;
+        }
+        nav>ul>li a::before {
+            margin-right: 5px;
+            content: "[";
+            transform: translateX(20px);
+            -webkit-transform: translateX(20px);
+            -moz-transform: translateX(20px);
+        }
+        nav>ul>li a::after {
+            margin-left: 5px;
+            content: "]";
+            transform: translateX(-20px);
+            -webkit-transform: translateX(-20px);
+            -moz-transform: translateX(-20px);
+        }
+        nav>ul>li a:hover::before,
+        nav>ul>li a:hover::after,
+        nav>ul>li a:focus::before,
+        nav>ul>li a:focus::after {
+            opacity: 1;
+            transform: translateX(0px);
+            -webkit-transform: translateX(0px);
+            -moz-transform: translateX(0px);
+        }
+        /* Styling the slide */
+        /* slide arrow */
+        .slider {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 100vh;
+            margin-top: -7.4%;
+            z-index: -9000;
+        }
+        .slider .slidea {
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+        }
+        .slidea {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../images/forest-floor-1031143_1920.jpg);
+            overflow: hidden;
+        }
+        .slidea p {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-family: "Merriweather";
+            font-size: 4em;
+            font-weight: 100;
+            color: #fff;
+            margin-top: 20%;
+        }
+        .slidea a {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            text-decoration: none;
+            font-family: "lato";
+            letter-spacing: 2px;
+            font-size: 1em;
+            font-weight: 700;
+            color: #fff;
+            width: 15%;
+            margin: 2% auto;
+            padding: 20px;
+            text-transform: uppercase;
+            background-color: #d35400;
+            z-index: 9000;
+        }
+        .slidea a:hover {
+            background-color: #026953;
+            transition: all fade-in 1s;
+        }
+        /* styling Empowering Section  */
+        .text {
+            background: #f9e40d;
+            text-align: center;
+            color: #026953;
+            font-family: "lato";
+            font-size: 1.5em;
+            letter-spacing: 2px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+        .container_icon {
+            width: 100%;
+            height: auto;
+            padding-top: 2%;
+            display: flex;
+            margin-bottom: 3%;
+        }
+        .icon {
+            width: 33%;
+        }
+        .icon p,
+        .icon img,
+        .icon h3,
+        .icon a {
+            margin: 0 auto;
+            display: flex;
+            padding: 0 2%;
+            text-align: center;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+        }
+        .icon>p {
+            padding-top: 3%;
+            font-size: 1.2em;
+            width: 80%;
+        }
+        .icon h3 {
+            padding-top: 3%;
+            font-size: 1.1em;
+            letter-spacing: 1px;
+            font-family: "Merriweather";
+            color: #026953;
+        }
+        .icon img {
+            width: 35%;
+            margin-top: 6%;
+            transition: transform 1s;
+        }
+        .icon img:hover {
+            transform: rotate(360deg);
+        }
+        .icon a {
+            font-family: "lato";
+            letter-spacing: 2px;
+            font-size: .7em;
+            font-weight: 700;
+            color: #fff;
+            width: 30%;
+            margin: 5% auto;
+            padding: 20px 20px;
+            text-transform: uppercase;
+            background-color: #d35400;
+        }
+        .icon a:hover {
+            background-color: #026953;
+            transition: all fade-in 1s;
+        }
+        /* Protection section */
+        #empower {
+            max-height: 500px;
+            margin-top: 5%;
+            width: 100%;
+            background: #026953;
+        }
+        .group hr {
+            border: .5px solid #fff;
+            width: 30%;
+            margin-top: 20px;
+        }
+        .left {
+            float: left;
+            height: 700px;
+            width: 50%;
+            background-image: url(../images/mountains-889131.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .right {
+            float: right;
+            width: 50%;
+            height: 700px;
+            background: #026953;
+            color: #fff;
+            overflow: hidden;
+        }
+        .group {
+            padding: 3% 8%;
+        }
+        .group h2 {
+            font-size: 2.9em;
+            font-weight: 100;
+            width: 80%;
+            font-family: "Merriweather";
+            letter-spacing: 1px;
+            line-height: 1.2em;
+        }
+        .group p {
+            font-size: 1.6em;
+            font-weight: 400;
+            font-family: "lato";
+            padding-top: 5%;
+            letter-spacing: 1px;
+        }
+        /* ==================================================== */
+        /* changing list number font size and font family */
+        .group ol {
+            list-style-type: none;
+            counter-reset: listNumbering;
+        }
+        .group ol>li {
+            font-size: 1.3em;
+            counter-increment: listNumbering;
+        }
+        .group ol>li:before {
+            content: counter(listNumbering, decimal-leading-zero)'.';
+            font-size: 3em;
+            padding-top: 8%;
+        }
+        .group li {
+            font-family: "lato";
+            font-weight: 300;
+            width: 100%;
+        }
+        /* End changing list number font size and font family */
+        /* ==================================================== */
+        .group li:nth-child(1) {
+            margin-top: 3%;
+        }
+        .action {
+            margin-top: 20px;
+            color: #fff;
+            padding: 3%;
+            background-color: #d35400;
+            font-size: .9em;
+            text-decoration: none;
+        }
+        .action a:hover {
+            background-color: #2CA343;
+            transition: all ease-in-out 1s;
+        }
+        /* ClearFix */
+        .clearFix {
+            clear: both;
+        }
+        /* End of ClearFix */
+        /* Container Mission Page */
+        .mission h2 {
+            font-family: "Merriweather";
+            text-align: center;
+            color: #026953;
+            font-size: 2.9em;
+            font-weight: 100;
+            letter-spacing: 1px;
+            margin-top: 3%;
+        }
+        .mission>p {
+            text-align: center;
+            font-size: 1.4em;
+            margin: 0 5%;
+            padding-top: 2%;
+        }
+        .container_mission {
+            width: 100%;
+            height: auto;
+            padding-top: 3%;
+            display: flex;
+            margin-bottom: 3%;
+        }
+        .iconM p,
+        .iconM img,
+        .iconM h3 {
+            display: flex;
+            padding: 0 5%;
+            flex-direction: column;
+            align-items: center;
+            text-align: justify;
+            line-height: 1.5em;
+            font-size: 1em;
+        }
+        .iconM>p {
+            padding-top: 3%;
+            font-size: 1.4em;
+        }
+        .iconM h3 {
+            margin-top: 4%;
+            font-size: 1.1em;
+            letter-spacing: 1px;
+            font-family: "Merriweather";
+            color: #026953;
+            text-align: center;
+        }
+        .iconM {
+            width: 33%;
+            padding: 2%;
+        }
+        .iconM>img {
+            width: 100%;
+            transition: transform 1s;
+        }
+        .iconM img:hover {
+            transform: scale(1.05);
+        }
+        .mission a {
+            display: flex;
+            width: 10%;
+            justify-content: center;
+            text-decoration: none;
+            align-items: center;
+            font-family: "lato";
+            letter-spacing: 2px;
+            font-size: 1em;
+            font-weight: 700;
+            color: #fff;
+            margin: 2% auto;
+            padding: 20px 50px;
+            text-transform: uppercase;
+            background-color: #d35400;
+        }
+        .mission a:hover {
+            background-color: #026953;
+            transition: all fade-in 1s;
+        }
+        /* End of Container Mission */
+        /* ================================== */
+        /* Styling the footer */
+        footer {
+            background: #2CA343;
+            height: auto;
+            overflow: hidden;
+        }
+        .company {
+            width: 35%;
+            float: left;
+            margin-top: .4%;
+        }
+        .company img {
+            width: 30%;
+            margin-left: 15%;
+            margin-top: 5px;
+        }
+        .social a:nth-child(1) {
+            margin-left: 7%;
+        }
+        .social a {
+            color: #fff;
+            display: inline-block;
+            font-size: 1.5em;
+            padding-left: 4%;
+            margin-bottom: 3%;
+        }
+        .company a:hover {
+            color: #d35400;
+            transition: 1s;
+        }
+        .company>p {
+            text-align: left;
+            line-height: .8em;
+            width: 100%;
+            margin-left: 10%;
+        }
+        .company>p:nth-child(1) {
+            padding-top: 2%;
+        }
+        /* nav footer */
+        .nav_footer {
+            width: 45%;
+            float: right;
+            margin-top: 3%;
+        }
+        .nav_footer>a {
+            display: inline-block;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-family: "lato";
+            color: #fff;
+            letter-spacing: 1px;
+            font-weight: 400;
+            padding-top: 6px;
+            font-size: 1.15em;
+        }
+        .nav_footer>a:hover,
+        .nav_footer>a:focus {
+            outline: none;
+        }
+        .nav_footer>a::before,
+        .nav_footer>a::after {
+            display: inline-block;
+            opacity: 0;
+            transition: transform 0.6s, opacity 0.2s;
+            -webkit-transition: -webkit-transform 0.6s, opacity 0.2s;
+            -moz-transition: -moz-transform 0.6s, opacity 0.2s;
+        }
+        .nav_footer>a::before {
+            margin-right: 5px;
+            content: "[";
+            transform: translateX(20px);
+            -webkit-transform: translateX(20px);
+            -moz-transform: translateX(20px);
+        }
+        .nav_footer>a::after {
+            margin-left: 5px;
+            content: "]";
+            transform: translateX(-20px);
+            -webkit-transform: translateX(-20px);
+            -moz-transform: translateX(-20px);
+        }
+        .nav_footer>a:hover::before,
+        .nav_footer>a:hover::after,
+        .nav_footer>a:focus::before,
+        .nav_footer>a:focus::after {
+            opacity: 1;
+            transform: translateX(0px);
+            -webkit-transform: translateX(0px);
+            -moz-transform: translateX(0px);
+        }
+        .nav_footer>a.active {
+            border: 2px solid #fff;
+            padding: 8px;
+        }
+        /* ================================== */
+        /* About CSS */
+        .sliderabout {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 450px;
+            background-image: url(../images/pexels-photo-1181408.jpeg);
+            /* background-size: cover; */
+            background-position: center;
+            background-position-y: -300px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin-top: -9.4%;
+            z-index: -9000;
+        }
+        .sliderabout>p {
+            text-align: center;
+            margin: 0 auto;
+            font-family: "Merriweather";
+            font-size: 4.3em;
+            font-weight: 100;
+            color: #fff;
+            padding-top: 19%;
+        }
+        .staff h2 {
+            font-size: 2.9em;
+            font-weight: 100;
+            color: #026953;
+            font-family: "Merriweather";
+            margin-top: 3%;
+            margin-bottom: 2%;
+            letter-spacing: 1px;
+            text-align: center;
+            line-height: 1.2em;
+        }
+        .abouta {
+            background-image: url(../images/african-3382795_1920.jpg);
+            float: left;
+            width: 60%;
+            z-index: 4000;
+        }
+        .about {
+            background: rgb(160, 140, 115);
+        }
+        .about h2 {
+            font-family: "Merriweather";
+            text-align: center;
+            color: #026953;
+            font-size: 2.9em;
+            padding-top: 13%;
+            font-weight: 100;
+            letter-spacing: 1px;
+        }
+        .about p {
+            margin: 1% 5%;
+            font-family: "lato";
+            padding: 3% 10%;
+            color: #000;
+            width: 40%;
+            text-align: justify;
+            line-height: 1.6em;
+            font-size: 1.3em;
+            float: right;
+        }
+        /* About Plus section */
+        #aboutP {
+            width: 100%;
+            background: #026953;
+        }
+        .groupP hr {
+            border: .5px solid #fff;
+            width: 30%;
+            margin-top: 20px;
+        }
+        .leftP {
+            float: left;
+            height: 555px;
+            width: 40%;
+            background-image: url(../images/mountains-889131.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .rightP {
+            float: right;
+            width: 60%;
+            height: 555px;
+            background: #026953;
+            color: #fff;
+            overflow: hidden;
+        }
+        .groupP {
+            padding: 3% 8%;
+        }
+        .groupP h2 {
+            font-size: 2em;
+            font-weight: 100;
+            width: 80%;
+            font-family: "Merriweather";
+            letter-spacing: 1px;
+            line-height: 1.2em;
+        }
+        .groupP p {
+            font-size: 1em;
+            text-align: justify;
+            font-weight: 400;
+            font-family: "lato";
+            padding-top: 2%;
+            letter-spacing: 1px;
+        }
+        /* Office location css for the about page */
+        #offices {
+            display: flex;
+            justify-content: space-around;
+        }
+        .locations {
+            margin: 0 auto;
+            width: 15%;
+            display: flex;
+            padding-bottom: 2%;
+            flex-direction: column;
+        }
+        .locations>h3 {
+            margin-top: 6%;
+            font-size: 1.2em;
+            margin-bottom: 7%;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        .locations>p {
+            text-align: center;
+            line-height: 1.6em;
+            font-size: .8em;
+        }
+        .locations>a {
+            text-decoration: none;
+        }
+        /* Caroussel Style for the about page */
+        #caroussel {
+            position: relative;
+            height: 300px;
+            padding: 0px;
+            margin: 0px;
+            list-style-type: none;
+        }
+        .slideAbout {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            z-index: 1;
+            -webkit-transition: opacity 1s;
+            -moz-transition: opacity 1s;
+            -o-transition: opacity 1s;
+            transition: opacity 1s;
+        }
+        .slideAbout .face {
+            font-size: 9em;
+            color: #026953;
+            text-align: center;
+        }
+        .showing {
+            opacity: 1;
+            z-index: 2;
+        }
+        /* ==================================== */
+        /* Take Action Page */
+        #countdown {
+            text-align: center;
+            color: #fff;
+            font-family: "lato";
+            font-size: 2.2em;
+            padding-top: 3%;
+            background: #d35400;
+            padding: 10px 10px;
+            margin: 2% auto;
+            width: 45%;
+        }
+        .slideract {
+            position: relative;
+            background-image: url(../images/african-3382795_1920.jpg);
+            background-size: cover;
+            height: 550px;
+            margin-top: -9%;
+            z-index: -4000;
+        }
+        /* .slideract .vid {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    z-index: -10000;} */
+        .sea>p {
+            font-size: 1em;
+            font-weight: 400;
+            font-family: "lato";
+            padding-top: 1%;
+            text-align: center;
+            color: #fff;
+        }
+        .slideract>p {
+            text-align: center;
+            margin: 0 auto;
+            font-family: "Merriweather";
+            font-size: 4.3em;
+            font-weight: 100;
+            color: #fff;
+            padding-top: 19%;
+        }
+        .container_action {
+            width: 100%;
+            height: auto;
+            padding-top: 3%;
+            display: flex;
+            margin-bottom: 3%;
+        }
+        .petition p,
+        .petition img,
+        .petition h3 {
+            display: flex;
+            align-items: center;
+            margin: auto 4%;
+            text-align: justify;
+        }
+        .petition img {
+            width: 90%;
+            border: solid 1px #026953;
+        }
+        .petition p {
+            padding-top: 5%;
+            line-height: 1.5em;
+        }
+        .petition h3 {
+            margin-top: 4%;
+            font-size: 1.1em;
+            letter-spacing: 1px;
+            font-family: "Merriweather";
+            color: #026953;
+            text-align: center;
+        }
+        .takeaction>p {
+            text-align: center;
+            margin: 4% 5%;
+            font-size: 1.2em;
+        }
+        .slideract>h2 {
+            font-family: "Merriweather";
+            position: absolute;
+            z-index: 3000;
+            top: 0;
+            right: 50;
+            text-align: center;
+            color: #026953;
+            font-size: 2.9em;
+            font-weight: 100;
+            letter-spacing: 1px;
+            margin-top: 3%;
+        }
+        .petition {
+            width: 39%;
+            align-items: flex-end;
+        }
+        .petition button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-family: "lato";
+            letter-spacing: 2px;
+            font-size: 1em;
+            font-weight: 700;
+            color: #fff;
+            width: auto;
+            margin: 4% auto;
+            padding: 10px 30px;
+            text-transform: uppercase;
+            background-color: #d35400;
+        }
+        .petition button:hover {
+            background-color: #026953;
+            transition: all fade-in 1s;
+        }
+        /* End Take Action CSS */
+        /* ==================================== */
+        /* Subscribe Page */
+        .form {
+            background-image: url(../images/subscribeimage.jpg);
+            background-repeat: no-repeat;
+            width: 100%;
+            position: absolute;
+            margin-top: -8.4%;
+            z-index: -3000;
+        }
+        .form form {
+            background: rgba(2, 105, 83, .5);
+            width: 60%;
+            padding-top: 2%;
+            padding-bottom: 3%;
+            margin: 10% auto 3% auto;
+        }
+        .form h1 {
+            font-family: "Merriweather";
+            font-size: 2.9em;
+            color: #fff;
+            margin-bottom: 5%;
+            font-weight: 100;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+        .form input {
+            margin: 2% auto;
+            position: relative;
+            display: flex;
+            align-content: center;
+            width: 60%;
+            padding: 25px 10px;
+            color: #000;
+        }
+         ::placeholder {
+            color: #000;
+            font-weight: bold;
+        }
+        .subscribe {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-family: "lato";
+            letter-spacing: 2px;
+            width: 30%;
+            font-size: 1em;
+            font-weight: 700;
+            color: #fff;
+            width: auto;
+            margin-top: 5px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 20px 50px;
+            text-transform: uppercase;
+            background-color: #d35400;
+        }
+        .subscribe:hover {
+            background-color: #026953;
+            transition: all fade-in 1s;
+        }
+        /* End of Subscribe Page */
+    }

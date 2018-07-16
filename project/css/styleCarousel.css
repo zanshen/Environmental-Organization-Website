@@ -1,0 +1,164 @@
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+.carousel {
+    margin: 50px auto;
+    overflow: hidden;
+    position: relative;
+    width: 240px;
+}
+
+.carousel:before,
+.carousel:after {
+    content: "";
+    display: table;
+}
+
+.carousel:after {
+    clear: both;
+}
+
+
+/*images faces*/
+
+.face1 {
+    background-image: url(../images/team_01.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.face2 {
+    background-image: url(../images/team_02.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.face3 {
+    background-image: url(../images/team_03.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.face4 {
+    background-image: url(../images/team_04.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.face5 {
+    background-image: url(../images/team_05.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.face6 {
+    background-image: url(../images/team_06.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.face7 {
+    background-image: url(../images/team_07.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.face8 {
+    background-image: url(../images/team_08.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.face9 {
+    background-image: url(../images/team_09.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.face10 {
+    background-image: url(../images/team_01.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.face11 {
+    background-image: url(../images/team_02.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.face12 {
+    background-image: url(../images/team_03.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.face13 {
+    background-image: url(../images/team_04.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.face14 {
+    background-image: url(../images/team_05.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.face15 {
+    background-image: url(../images/team_06.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.face16 {
+    background-image: url(../images/team_07.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.face17 {
+    background-image: url(../images/team_08.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.face18 {
+    background-image: url(../images/team_09.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/*end images faces*/
+
+.slide {
+    border: 10px solid #fff;
+    color: #fff;
+    padding-top: 2.5%;
+    float: left;
+    height: 240px;
+    text-align: center;
+    width: 240px;
+}
+
+.slide h3,
+.slide p,
+{
+    font-size: 1.2em;
+}
+
+@media (min-width: 768px) {
+    .carousel {
+        width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .carousel {
+        width: 960px;
+    }
+}
