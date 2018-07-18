@@ -42,7 +42,7 @@
         } else {
             alert('Thank you for subscribing!') // dialog box
             setTimeout(function() {
-                window.location = "../index.html"
+                window.location = "index.html"
             }); // redirects user to homepage upon subscribing successfuly
             return true; // allows function to initiate when all fields are submitted correctly
         }
