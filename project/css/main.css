@@ -929,6 +929,7 @@ footer {
     background-image: url(../images/subscribeimage.jpg);
     background-repeat: no-repeat;
     width: 100%;
+    background-size: cover;
     position: absolute;
     margin-top: -8.4%;
     z-index: -3000;
