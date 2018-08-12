@@ -1,123 +1,1323 @@
-    @media only screen and (min-width: 320px) {
-        /* Styles here */
-        /* styling the navigation */
-        .container-nav {
-            margin: 0 auto;
-            background: #026953;
-            padding: 0 auto;
-            width: auto;
-            overflow: hidden;
+    /* Small Mobile Phone (max width of 320px && 568px)*/
+    
+    @media only screen and (max-width: 568px) {
+        #slider,
+        .wrap,
+        .slide-content {
+            height: 70vh;
         }
-        .logo-nav,
-        .main-logo {
-            display: block;
-            width: 70%;
-            margin: 0 auto;
-        }
-        #head>a {
+        #menu-icon {
             display: inline-block;
-            padding-top: none;
-            font-size: 1em;
-            margin: 0px auto;
         }
-        #head>a::before,
-        #head>a::after {
-            display: block;
-            opacity: 0;
-        }
-        #head>a::before {
-            margin-right: 0px;
-            content: none;
-        }
-        #head>a::after {
-            margin-left: 0px;
-            content: none;
-        }
-        a.active {
-            border: 1px solid #fff;
-            padding: 3px;
-        }
-        /* Styling the slide */
-        .slider {
-            display: block;
+        .container-nav {
             width: 100%;
-            height: 250px;
-            overflow-y: hidden;
-            margin-top: 0%;
+            left: 0;
+            position: fixed;
+            z-index: 2000;
         }
-        .slider .slidea {
-            display: block;
-            width: 100%;
-            height: 250px;
-        }
-        .slidea p {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            font-size: 1.5em;
-            color: #fff;
-            margin-top: 23%;
-        }
-        .slidea a {
+        nav ul,
+        nav:active ul {
             display: none;
+            position: fixed;
+            padding: 5px;
+            background: #026953;
+            right: 0px;
+            top: 65px;
+            width: 50%;
+            z-index: 2000;
         }
+        nav:hover ul {
+            display: block;
+            background: #026953;
+            z-index: 2000;
+        }
+        nav li {
+            text-align: center;
+            width: 100%;
+            padding: 5px 0;
+            margin: 0;
+            z-index: 2000;
+        }
+        nav>ul>li a::before {
+            content: none;
+            transform: none;
+        }
+        nav>ul>li a::after {
+            margin-left: 5px;
+            content: none;
+            transform: none;
+        }
+        nav>ul>li a:hover::before,
+        nav>ul>li a:hover::after,
+        nav>ul>li a:focus::before,
+        nav>ul>li a:focus::after {
+            opacity: none;
+            transform: none;
+        }
+        .slide-content span {
+            font-size: .6rem;
+            padding-bottom: 10%;
+        }
+        .slide-content a {
+            margin: 15% auto 0% auto;
+            padding: 20px;
+        }
+        .arrow {
+            margin-top: -5px;
+        }
+        #arrow-left {
+            border-width: 10px 20px 10px 0;
+            margin-left: 5%;
+        }
+        #arrow-right {
+            border-width: 10px 0 10px 20px;
+            margin-right: 5%;
+        }
+        /* ++++++++++++++++++++++++++++ */
+        /* ++++++++++++++++++++++++++++ */
         /* styling Empowering Section  */
         .text {
-            margin-top: 0%;
-            font-size: 1em;
-            letter-spacing: 2px;
-            padding-top: 10px;
-            padding-bottom: 10px;
+            font-size: 1.3rem;
         }
         .container_icon {
             width: 100%;
-            height: auto;
-            padding-top: 2%;
-            margin-bottom: 0;
+            display: block;
         }
         .icon {
             width: 100%;
-            display: block;
         }
         .icon p,
         .icon img,
         .icon h3,
-        {
-            margin: 0 auto;
-            padding: 0 2%;
-            text-align: center;
-            align-items: center;
-            text-decoration: none;
+        .icon a {
+            text-align: justify;
         }
-        .icon p {
-            padding-top: 3%;
-            font-size: 1em;
-            width: 80%;
+        .icon>p {
+            width: 90%;
         }
         .icon h3 {
-            padding-top: 3%;
-            font-size: 1.1em;
-            letter-spacing: 1px;
-            font-family: "Merriweather";
-            color: #026953;
+            padding-top: 5%;
+            font-size: 1.5em;
         }
         .icon img {
-            width: 35%;
+            width: 45%;
             margin-top: 6%;
+            transition: none;
         }
         .icon img:hover {
             transform: none;
         }
+        /* ++++++++++++++++++ */
+        /* ++++++++++++++++++ */
+        /* ++++++++++++++++++ */
+        /* Protection section */
+        #empower {
+            max-height: none;
+            height: auto;
+            margin-top: 5%;
+            width: 100%;
+            overflow: none;
+            background: #026953;
+        }
+        .group hr {
+            border: .5px solid #fff;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .left {
+            float: none;
+            height: 30vh;
+            width: 100%;
+        }
+        .right {
+            float: none;
+            width: 100%;
+            height: auto;
+        }
+        .group {
+            padding: 3% 8%;
+        }
+        .group h2 {
+            padding-top: 5%;
+            font-size: 1.5em;
+            text-align: center;
+            font-weight: 100;
+            width: 100%;
+        }
+        .group p {
+            font-size: .9em;
+            font-weight: 400;
+            font-family: "lato";
+            padding-top: 15%;
+            letter-spacing: 1px;
+        }
+        /* ==================================================== */
+        /* changing list number font size and font family */
+        .group ol {
+            list-style-type: none;
+            counter-reset: listNumbering;
+        }
+        .group ol>li {
+            font-size: 1em;
+            counter-increment: listNumbering;
+        }
+        .group ol>li:before {
+            content: counter(listNumbering, decimal-leading-zero)'.';
+            font-size: 1.7em;
+            padding-top: 10%;
+        }
+        .group li {
+            text-align: justify;
+            font-family: "lato";
+            padding-top: 5%;
+            font-weight: 300;
+            width: 100%;
+        }
+        /* End changing list number font size and font family */
+        /* +++++++++++++++++++++++++++++++++++++++++++++++++++ */
+        /* +++++++++++++++++++++++++++++++++++++++++++++++++++ */
+        /* +++++++++++++++++++++++++++++++++++++++++++++++++++ */
+        /* Container Mission Page */
+        .mission h2 {
+            font-size: 2em;
+            margin-top: 3%;
+        }
+        .mission>p {
+            text-align: justify;
+            font-size: 1rem;
+        }
+        .container_mission {
+            width: 100%;
+            height: auto;
+            padding-top: 3%;
+            display: block;
+            margin-bottom: 3%;
+        }
+        .iconM p,
+        .iconM img,
+        {
+            display: block;
+            padding: 0 5%;
+            flex-direction: none;
+            text-align: justify;
+        }
+        .iconM>p {
+            font-size: 1rem;
+        }
+        .iconM {
+            width: 100%;
+            padding: 2%;
+        }
+        .iconM>img {
+            width: 100%;
+            transition: none;
+        }
+        .iconM img:hover {
+            transform: none;
+        }
+        .mission a {
+            display: flex;
+            width: 50%;
+            font-family: "lato";
+            letter-spacing: 2px;
+            font-size: .6em;
+            margin: 5% auto;
+            padding: 20px 50px;
+        }
+        .mission a:hover {
+            transition: none;
+        }
+        /* End of Container Mission */
+        /* ++++++++++++++++++ */
+        /* ++++++++++++++++++ */
+        /* ++++++++++++++++++ */
+        /* ++++++++++++++++++ */
+        /* ================================== */
+        /* Styling the footer */
+        footer {
+            background: #2CA343;
+            height: auto;
+            overflow: hidden;
+        }
+        .company {
+            width: 100%;
+            float: left;
+            margin-top: .4%;
+        }
+        .company img {
+            width: 30%;
+            margin-left: 10%;
+            margin-right: 15%;
+            margin-top: 5px;
+        }
+        .company a:nth-child(2),
+        .company a:nth-child(3),
+        .company a:nth-child(4),
+        .company a:nth-child(5) {
+            color: #fff;
+            display: inline-block;
+            font-size: 1.3em;
+            padding-left: 3%;
+            margin-bottom: 3%;
+        }
+        .company a:hover {
+            transition: none;
+        }
+        /* nav footer */
+        .nav_footer {
+            display: none;
+        }
+        /* ++++++++++++++++++++++++++++++ */
+        /* ++++++++++++++++++++++++++++++ */
+        /* About CSS */
+        .sliderabout>p {
+            text-align: center;
+            margin: 0 auto;
+            font-size: 2rem;
+            padding-top: 75%;
+        }
+        .staff h2 {
+            font-size: 2.9em;
+            font-weight: 100;
+            margin-top: 9%;
+            margin-bottom: 1%;
+        }
+        /* About Plus section */
+        #aboutP {
+            width: 100%;
+            background: #026953;
+        }
+        .groupP hr {
+            border: .5px solid #fff;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .leftP {
+            float: none;
+            height: 30vh;
+            width: 100%;
+            background-image: url(../images/mountains-889131.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .rightP {
+            float: none;
+            width: 100%;
+            height: auto;
+            background: #026953;
+            color: #fff;
+            overflow: none;
+        }
+        .groupP {
+            padding: 3% 8%;
+        }
+        .groupP h2 {
+            font-size: 1.5em;
+            width: 100%;
+            text-align: center;
+        }
+        .groupP p {
+            font-size: 1em;
+            font-weight: 200;
+            font-family: "lato";
+        }
+        /* Office location css for the about page */
+        #offices {
+            display: block;
+        }
+        .locations {
+            margin: 0 auto;
+            width: 100%;
+            padding-bottom: 2%;
+        }
+        .locations>h3 {
+            margin-top: 6%;
+            font-size: 1em;
+            margin-bottom: 7%;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        .locations>p {
+            text-align: center;
+            line-height: 1.6em;
+            font-size: .8em;
+        }
+        .locations>a {
+            text-decoration: none;
+            text-decoration-style: none;
+        }
+        /* Caroussel Style for the about page */
+        #caroussel {
+            position: relative;
+            height: 300px;
+            padding: 0px;
+            margin: 0px;
+            list-style-type: none;
+        }
+        /* ==================================== */
+        /* ==================================== */
+        /* ==================================== */
+        /* ==================================== */
+        /* Take Action Page */
+        #countdown {
+            text-align: center;
+            color: #fff;
+            font-family: "lato";
+            font-size: 1em;
+            padding-top: 3%;
+            background: #d35400;
+            padding: 10px 10px;
+            margin: 2% auto;
+            width: 100%;
+        }
+        .slideract {
+            position: relative;
+            background-image: url(../images/african-3382795_1920.jpg);
+            background-size: cover;
+            overflow: hidden;
+            width: 100%;
+            height: 80vh;
+        }
+        .sea {
+            font-size: 1em;
+            font-weight: 400;
+            width: 90%;
+            font-family: "lato";
+            padding-top: 10%;
+            padding-bottom: 10%;
+            margin: 0 auto;
+            text-align: center;
+            color: #fff;
+            text-shadow: 3px 3px 2px #000;
+        }
+        .slideract>p {
+            text-align: center;
+            margin: 0 auto;
+            font-family: "Merriweather";
+            font-size: 2.3rem;
+            font-weight: 300;
+            color: #026953;
+            padding-top: 50%;
+        }
+        .container_action {
+            width: 100%;
+            height: auto;
+            padding-top: 3%;
+            display: block;
+            margin-bottom: 3%;
+        }
+        .petition img,
+        .petition h3 {
+            display: block;
+            align-items: center;
+            margin: 0 auto;
+            text-align: justify;
+        }
+        .petition img {
+            width: 80%;
+            border: solid 1px #026953;
+        }
+        .petition p {
+            padding-top: 5%;
+            padding-bottom: 3%;
+            margin: 0 5%;
+            line-height: 1.5em;
+        }
+        .petition h3 {
+            margin-top: 4%;
+            font-size: 1.1em;
+            letter-spacing: 1px;
+            font-family: "Merriweather";
+            color: #026953;
+            text-align: center;
+        }
+        .petition {
+            width: 100%;
+            align-items: flex-end;
+        }
+        .petition button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-family: "lato";
+            letter-spacing: 2px;
+            font-size: 1em;
+            font-weight: 700;
+            color: #fff;
+            width: auto;
+            margin: 4% auto 9% auto;
+            padding: 10px 30px;
+            text-transform: uppercase;
+            background-color: #d35400;
+        }
+        .petition button:hover {
+            background-color: #026953;
+            transition: none;
+        }
+        .takeaction>p {
+            text-align: justify;
+            margin: 5% 5%;
+            font-size: 1em;
+        }
+        .slideract>h2 {
+            font-family: "Merriweather";
+            position: absolute;
+            z-index: 3000;
+            top: 0;
+            right: 50;
+            text-align: center;
+            color: #026953;
+            font-size: 2.9em;
+            font-weight: 100;
+            letter-spacing: 1px;
+            margin-top: 3%;
+        }
+        /* End Take Action CSS */
+        /* ==================================== */
+        /* ==================================== */
+        /* ==================================== */
+        /* ==================================== */
+        /* Subscribe Page */
+        .form {
+            background-image: url(../images/subscribeimage.jpg);
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100vh;
+            background-size: cover;
+            position: absolute;
+        }
+        .form form {
+            width: 90%;
+        }
+        .form h1 {
+            font-family: "Merriweather";
+            font-size: 2em;
+            color: #fff;
+            margin-bottom: 5%;
+            margin-top: 35%;
+            font-weight: 100;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+        .form input {
+            margin: 2% auto;
+            position: relative;
+            display: flex;
+            align-content: center;
+            width: 90%;
+            padding: 25px 10px;
+            color: #000;
+        }
+         ::placeholder {
+            color: #000;
+            font-weight: bold;
+        }
+        .subscribe {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-family: "lato";
+            letter-spacing: 2px;
+            width: 30%;
+            font-size: 1em;
+            font-weight: 700;
+            color: #fff;
+            width: auto;
+            margin-top: 5px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 20px 50px;
+            text-transform: uppercase;
+            background-color: #d35400;
+        }
+        .subscribe:hover {
+            background-color: #026953;
+            transition: all fade-in 1s;
+        }
+        /* End of Subscribe Page */
     }
+    /* ================================== */
+    /* ================================== */
+    /* ================================== */
+    /* ================================== */
+    /* Small Mobile Phone (min width of 569px && max 747px)*/
     
-    @media only screen and (min-width: 768px) {
-        /* Styles here */
+    @media only screen and (min-width:569px) and (max-width: 747px) {
+        #slider,
+        .wrap,
+        .slide-content {
+            height: 70vh;
+        }
+        #menu-icon {
+            display: inline-block;
+        }
+        .container-nav {
+            width: 100%;
+            left: 0;
+            position: fixed;
+            z-index: 2000;
+        }
+        nav ul,
+        nav:active ul {
+            display: none;
+            position: fixed;
+            padding: 5px;
+            background: #026953;
+            right: 0px;
+            top: 65px;
+            width: 50%;
+            z-index: 2000;
+        }
+        nav:hover ul {
+            display: block;
+            background: #026953;
+            z-index: 2000;
+        }
+        nav li {
+            text-align: center;
+            width: 100%;
+            padding: 5px 0;
+            margin: 0;
+            z-index: 2000;
+        }
+        nav>ul>li a::before {
+            content: none;
+            transform: none;
+        }
+        nav>ul>li a::after {
+            margin-left: 5px;
+            content: none;
+            transform: none;
+        }
+        nav>ul>li a:hover::before,
+        nav>ul>li a:hover::after,
+        nav>ul>li a:focus::before,
+        nav>ul>li a:focus::after {
+            opacity: none;
+            transform: none;
+        }
+        .slide-content span {
+            font-size: .6rem;
+            padding-bottom: none;
+        }
+        .slide-content a {
+            margin: 6% auto 0% auto;
+            padding: 20px;
+        }
+        .arrow {
+            margin-top: -5px;
+        }
+        #arrow-left {
+            border-width: 10px 20px 10px 0;
+            margin-left: 5%;
+        }
+        #arrow-right {
+            border-width: 10px 0 10px 20px;
+            margin-right: 5%;
+        }
+        /* ++++++++++++++++++++++++++++ */
+        /* ++++++++++++++++++++++++++++ */
+        /* styling Empowering Section  */
+        .text {
+            font-size: 1.3em;
+        }
+        .icon {
+            width: 33%;
+        }
+        .icon p,
+        .icon img,
+        .icon h3,
+        .icon a {
+            text-align: left;
+        }
+        .icon>p {
+            padding-top: 3%;
+            font-size: 1.2em;
+            width: 80%;
+        }
+        .icon img {
+            transition: none;
+        }
+        .icon img:hover {
+            transform: none;
+        }
+        .icon a:hover {
+            transition: none;
+        }
+        /* ++++++++++++++++++ */
+        /* ++++++++++++++++++ */
+        /* ++++++++++++++++++ */
+        /* Protection section */
+        #empower {
+            max-height: none;
+            height: auto;
+            margin-top: 5%;
+            width: 100%;
+            overflow: none;
+            background: #026953;
+        }
+        .group hr {
+            border: .5px solid #fff;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .left {
+            float: none;
+            height: 30vh;
+            width: 100%;
+        }
+        .right {
+            float: none;
+            width: 100%;
+            height: auto;
+        }
+        .group {
+            padding: 3% 8%;
+        }
+        .group h2 {
+            padding-top: 5%;
+            font-size: 1.5em;
+            text-align: center;
+            font-weight: 100;
+            width: 100%;
+        }
+        .group p {
+            font-size: .9em;
+            font-weight: 400;
+            font-family: "lato";
+            padding-top: 15%;
+            letter-spacing: 1px;
+        }
+        /* ==================================================== */
+        /* changing list number font size and font family */
+        .group ol {
+            list-style-type: none;
+            counter-reset: listNumbering;
+        }
+        .group ol>li {
+            font-size: 1em;
+            counter-increment: listNumbering;
+        }
+        .group ol>li:before {
+            content: counter(listNumbering, decimal-leading-zero)'.';
+            font-size: 1.7em;
+            padding-top: 10%;
+        }
+        .group li {
+            text-align: justify;
+            font-family: "lato";
+            padding-top: 5%;
+            font-weight: 300;
+            width: 100%;
+        }
+        /* End changing list number font size and font family */
+        /* +++++++++++++++++++++++++++++++++++++++++++++++++++ */
+        /* +++++++++++++++++++++++++++++++++++++++++++++++++++ */
+        /* +++++++++++++++++++++++++++++++++++++++++++++++++++ */
+        /* Container Mission Page */
+        .mission h2 {
+            font-family: "Merriweather";
+            text-align: center;
+            color: #026953;
+            font-size: 2.9em;
+            font-weight: 100;
+            letter-spacing: 1px;
+            margin-top: 3%;
+        }
+        .mission>p {
+            text-align: center;
+            font-size: 1.2em;
+            margin: 0 5%;
+            padding-top: 2%;
+        }
+        .iconM p,
+        .iconM img,
+        .iconM h3 {
+            display: flex;
+            padding: 0 5%;
+            flex-direction: column;
+            align-items: center;
+            text-align: left;
+            line-height: 1.5em;
+            font-size: 1em;
+        }
+        .iconM>p {
+            padding-top: 3%;
+            font-size: 1.2em;
+            text-align: left;
+        }
+        .iconM h3 {
+            margin-top: 4%;
+            font-size: 1.3em;
+            letter-spacing: 0px;
+            font-family: "Merriweather";
+            color: #026953;
+            text-align: center;
+        }
+        .iconM {
+            padding: .5%;
+        }
+        .iconM>img {
+            transition: none;
+        }
+        .iconM img:hover {
+            transform: none;
+        }
+        .mission a:hover {
+            transition: none;
+        }
+        /* End of Container Mission */
+        /* ++++++++++++++++++ */
+        /* ++++++++++++++++++ */
+        /* ++++++++++++++++++ */
+        /* ++++++++++++++++++ */
+        /* ================================== */
+        /* Styling the footer */
+        footer {
+            background: #2CA343;
+            height: auto;
+            width: 100%;
+            overflow: hidden;
+        }
+        .company {
+            width: 100%;
+            float: none;
+        }
+        .company img {
+            width: 30%;
+            margin-left: 10%;
+            margin-right: 15%;
+            margin-top: 5px;
+        }
+        .company a:hover {
+            transition: none;
+        }
+        /* nav footer */
+        .nav_footer {
+            display: none;
+        }
+        /* ++++++++++++++++++++++++++++++ */
+        /* ++++++++++++++++++++++++++++++ */
+        /* About CSS */
+        .sliderabout>p {
+            text-align: center;
+            margin: 0 auto;
+            font-size: 2rem;
+            padding-top: 40%;
+        }
+        .staff h2 {
+            font-size: 2.9em;
+            font-weight: 100;
+            margin-top: 9%;
+            margin-bottom: 1%;
+        }
+        /* About Plus section */
+        #aboutP {
+            width: 100%;
+            background: #026953;
+        }
+        .groupP hr {
+            border: .5px solid #fff;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .leftP {
+            float: none;
+            height: 30vh;
+            width: 100%;
+            background-image: url(../images/mountains-889131.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .rightP {
+            float: none;
+            width: 100%;
+            height: auto;
+            background: #026953;
+            color: #fff;
+            overflow: none;
+        }
+        .groupP {
+            padding: 3% 8%;
+        }
+        .groupP h2 {
+            font-size: 1.5em;
+            width: 100%;
+            text-align: center;
+        }
+        .groupP p {
+            font-size: 1em;
+            font-weight: 200;
+            font-family: "lato";
+        }
+        /* Office location css for the about page */
+        #offices {
+            display: block;
+        }
+        .locations {
+            margin: 0 auto;
+            width: 100%;
+            padding-bottom: 2%;
+        }
+        .locations>h3 {
+            margin-top: 6%;
+            font-size: 1em;
+            margin-bottom: 7%;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        .locations>p {
+            text-align: center;
+            line-height: 1.6em;
+            font-size: .8em;
+        }
+        .locations>a {
+            text-decoration: none;
+            text-decoration-style: none;
+        }
+        /* Caroussel Style for the about page */
+        #caroussel {
+            position: relative;
+            height: 300px;
+            padding: 0px;
+            margin: 0px;
+            list-style-type: none;
+        }
+        /* ==================================== */
+        /* ==================================== */
+        /* ==================================== */
+        /* ==================================== */
+        /* Take Action Page */
+        #countdown {
+            text-align: center;
+            color: #fff;
+            font-family: "lato";
+            font-size: 1em;
+            padding-top: 3%;
+            background: #d35400;
+            padding: 10px 10px;
+            margin: 5% auto;
+            width: 80%;
+        }
+        .slideract {
+            position: relative;
+            background-image: url(../images/african-3382795_1920.jpg);
+            background-size: cover;
+            overflow: hidden;
+            width: 100%;
+            height: 80vh;
+        }
+        .sea {
+            font-size: 1em;
+            font-weight: 400;
+            width: 90%;
+            font-family: "lato";
+            padding-top: 6%;
+            padding-bottom: 3%;
+            text-align: center;
+            color: #fff;
+            text-shadow: 3px 3px 2px #000;
+        }
+        .slideract>p {
+            text-align: center;
+            margin: 0 auto;
+            font-family: "Merriweather";
+            font-size: 2.3rem;
+            font-weight: 300;
+            color: #026953;
+            padding-top: 30%;
+        }
+        .container_action {
+            width: 100%;
+            height: auto;
+            padding-top: 3%;
+            display: block;
+            margin-bottom: 3%;
+        }
+        .petition img,
+        .petition h3 {
+            display: block;
+            align-items: center;
+            margin: 0 auto;
+            text-align: justify;
+        }
+        .petition img {
+            width: 80%;
+            border: solid 1px #026953;
+        }
+        .petition p {
+            padding-top: 5%;
+            padding-bottom: 3%;
+            margin: 0 5%;
+            line-height: 1.5em;
+        }
+        .petition h3 {
+            margin-top: 4%;
+            font-size: 1.1em;
+            letter-spacing: 1px;
+            font-family: "Merriweather";
+            color: #026953;
+            text-align: center;
+        }
+        .petition {
+            width: 100%;
+            align-items: flex-end;
+        }
+        .petition button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-family: "lato";
+            letter-spacing: 2px;
+            font-size: 1em;
+            font-weight: 700;
+            color: #fff;
+            width: auto;
+            margin: 4% auto 9% auto;
+            padding: 10px 30px;
+            text-transform: uppercase;
+            background-color: #d35400;
+        }
+        .petition button:hover {
+            background-color: #026953;
+            transition: none;
+        }
+        .takeaction>p {
+            text-align: justify;
+            margin: 5% 5%;
+            font-size: 1em;
+        }
+        .slideract>h2 {
+            font-family: "Merriweather";
+            position: absolute;
+            z-index: 3000;
+            top: 0;
+            right: 50;
+            text-align: center;
+            color: #026953;
+            font-size: 2.9em;
+            font-weight: 100;
+            letter-spacing: 1px;
+            margin-top: 3%;
+        }
+        /* End Take Action CSS */
+        /* ==================================== */
+        /* ==================================== */
+        /* ==================================== */
+        /* ==================================== */
+        /* Subscribe Page */
+        .form {
+            background-image: url(../images/subscribeimage.jpg);
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100vh;
+            background-size: cover;
+            position: absolute;
+        }
+        .form form {
+            width: 90%;
+        }
+        .form h1 {
+            font-family: "Merriweather";
+            font-size: 2em;
+            color: #fff;
+            margin-bottom: 5%;
+            margin-top: 35%;
+            font-weight: 100;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+        .form input {
+            margin: 2% auto;
+            position: relative;
+            display: flex;
+            align-content: center;
+            width: 90%;
+            padding: 25px 10px;
+            color: #000;
+        }
+         ::placeholder {
+            color: #000;
+            font-weight: bold;
+        }
+        .subscribe {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-family: "lato";
+            letter-spacing: 2px;
+            width: 30%;
+            font-size: 1em;
+            font-weight: 700;
+            color: #fff;
+            width: auto;
+            margin-top: 5px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 20px 50px;
+            text-transform: uppercase;
+            background-color: #d35400;
+        }
+        .subscribe:hover {
+            background-color: #026953;
+            transition: all fade-in 1s;
+        }
+        /* End of Subscribe Page */
     }
+    /* ================================== */
+    /* ++++++++++++++++++++++++++++++ */
+    /* Tablet Sizes   for a maximum width of 1112px (Ipad mini to Ipad Pro included some desktop screen with small width*/
     
-    @media only screen and (min-width: 1200px) {
-        /* Styles here */
-    }
-    
-    @media only screen and (min-width: 1600px) {
-        /* Styles here */
+    @media all and (max-width: 1112px) {
+        .container-nav {
+            width: 100%;
+            left: 0;
+            z-index: 1000;
+            position: fixed;
+        }
+        .slide-content span {
+            font-size: 1.5em;
+            color: #fff;
+            font-family: "Merriweather";
+        }
+        .icon img {
+            width: 35%;
+            margin-top: 6%;
+            transition: none;
+        }
+        .icon img:hover {
+            transform: none;
+        }
+        /* Protection section */
+        .group hr {
+            border: .5px solid #fff;
+            width: 80%;
+            margin-top: 20px;
+        }
+        .left {
+            float: left;
+            height: 500px;
+            width: 40%;
+        }
+        .right {
+            float: right;
+            width: 60%;
+            height: 500px;
+        }
+        .group {
+            padding: 3% 8%;
+        }
+        .group h2 {
+            font-size: 1.9em;
+        }
+        .group p {
+            font-size: 1.em;
+            font-weight: 400;
+            font-family: "lato";
+            padding-top: 2%;
+            letter-spacing: 1px;
+        }
+        /* ==================================================== */
+        /* changing list number font size and font family */
+        .group ol>li {
+            font-size: 1.em;
+        }
+        .group ol>li:before {
+            content: counter(listNumbering, decimal-leading-zero)'.';
+            font-size: 1em;
+            font-weight: bold;
+            padding-top: 6%;
+        }
+        .group li {
+            font-family: "lato";
+            font-weight: 300;
+            width: 100%;
+        }
+        /* End changing list number font size and font family */
+        /* ==================================================== */
+        /* Container Mission Page */
+        .mission>p {
+            text-align: center;
+            font-size: 1.2em;
+            margin: 0 5%;
+            padding-top: 2%;
+        }
+        .iconM>p {
+            padding-top: 3%;
+            font-size: 1.1em;
+            text-align: justify;
+        }
+        .iconM h3 {
+            margin-top: 4%;
+            font-size: 1.1em;
+            letter-spacing: 1px;
+            font-family: "Merriweather";
+            color: #026953;
+            text-align: center;
+        }
+        .iconM>img {
+            transition: none;
+        }
+        .iconM img:hover {
+            transform: none;
+        }
+        .mission a {
+            display: flex;
+            width: 20%;
+            justify-content: center;
+            text-decoration: none;
+            align-items: center;
+            font-family: "lato";
+            letter-spacing: 2px;
+            font-size: 1em;
+            font-weight: 700;
+            color: #fff;
+            margin: 2% auto;
+            padding: 20px 50px;
+            text-transform: uppercase;
+            background-color: #d35400;
+        }
+        .mission a:hover {
+            background-color: #026953;
+            transition: all fade-in 1s;
+        }
+        /* End of Container Mission */
+        /* ================================== */
+        /* Styling the footer */
+        .company {
+            width: 40%;
+            float: left;
+            margin-top: .4%;
+        }
+        .company img {
+            width: 30%;
+            margin-left: 10%;
+        }
+        .company a:nth-child(2),
+        .company a:nth-child(3),
+        .company a:nth-child(4),
+        .company a:nth-child(5) {
+            color: #fff;
+            font-size: 1em;
+        }
+        .social a:nth-child(1) {
+            margin-left: 1%;
+        }
+        .social a {
+            color: #fff;
+            display: inline-block;
+            font-size: 1em;
+            padding-left: 0%;
+            margin-bottom: 3%;
+        }
+        .company>p:nth-child(1) {
+            padding-top: 2%;
+        }
+        /* nav footer */
+        .nav_footer>a {
+            font-size: .6em;
+        }
+        .nav_footer>a:hover,
+        .nav_footer>a:focus {
+            outline: none;
+        }
+        /* ================================== */
+        /* About CSS */
+        /* About Plus section */
+        .groupP hr {
+            border: .5px solid #fff;
+            width: 80%;
+            margin-top: 20px;
+        }
+        .leftP {
+            float: left;
+            height: 400px;
+            width: 30%;
+        }
+        .rightP {
+            width: 70%;
+            height: 400px;
+        }
+        .groupP {
+            padding: 3% 3%;
+        }
+        .groupP h2 {
+            font-size: 1.4em;
+            font-weight: 100;
+            width: 100%;
+            font-family: "Merriweather";
+            letter-spacing: 1px;
+            line-height: 1.2em;
+        }
+        .groupP p {
+            font-size: .7em;
+            text-align: justify;
+            font-weight: 300;
+            font-family: "lato";
+            padding-top: 2%;
+            letter-spacing: 1px;
+        }
+        /* ==================================== */
+        /* Take Action Page */
+        #countdown {
+            padding: 10px 10px;
+            margin: 7% auto;
+            width: 85%;
+        }
+        .slideract {
+            position: relative;
+            background-image: url(../images/african-3382795_1920.jpg);
+            background-size: cover;
+            height: 550px;
+            margin-top: -9%;
+            z-index: -4000;
+        }
+        .sea {
+            /* style for the text on top of the countdown */
+            font-size: 1em;
+            font-weight: 400;
+            font-family: "lato";
+            padding-top: 1%;
+            margin: 0 auto;
+            text-align: center;
+            color: #fff;
+            text-shadow: 3px 3px 2px #000;
+        }
+        .slideract>p {
+            text-align: center;
+            margin: 0 auto;
+            font-family: "Merriweather";
+            font-size: 4.3em;
+            font-weight: 100;
+            color: #fff;
+            padding-top: 28%;
+        }
+        /* End Take Action CSS */
+        /* ==================================== */
+        /* Subscribe Page */
+        .form form {
+            width: 90%;
+            padding-top: 2%;
+            padding-bottom: 3%;
+            margin: 10% auto 3% auto;
+        }
+        .form h1 {
+            font-size: 2.5em;
+            margin-bottom: 5%;
+            margin-top: 5%;
+        }
+        .form input {
+            margin: .5% auto;
+            position: relative;
+            display: flex;
+            align-content: center;
+            width: 60%;
+            padding: 25px 10px;
+            color: #000;
+        }
+        /* End of Subscribe Page */
     }
