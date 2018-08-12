@@ -10,46 +10,36 @@
     box-sizing: border-box;
     padding: 0;
     font-family: "lato", "Merriweather", Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
 }
 
 body {
     width: 100%
 }
 
+
+/* ############################### */
+
+
+/* ############################### */
+
+#slider,
+.wrap,
+.slide-content {
+    width: 100%;
+    height: 100vh;
+}
+
+
+/* Navigation */
+
 .container-nav {
     background: #026953;
-    margin: 0 10%;
+    width: 80%;
+    left: 10%;
     height: 100px;
-}
-
-ul {
-    list-style: none;
-}
-
-li {
-    display: inline-block;
-    padding-top: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
-}
-
-nav>ul>li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.4em;
-    font-weight: 400;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
-#logo {
-    margin: 5px;
-    float: left;
-    width: 25%;
-    height: 80px;
-    background: url(../images/CCE_logoBW.svg) no-repeat center;
-    display: block;
+    position: fixed;
+    z-index: 2000;
 }
 
 nav {
@@ -58,9 +48,48 @@ nav {
     font-family: 'lato', sans-serif;
 }
 
+#menu-icon {
+    background: url(../images/menu-icon.png) no-repeat center;
+    display: hidden;
+    width: 32px;
+    height: 32px;
+}
+
+#logo {
+    margin: 15px;
+    float: left;
+    width: 150px;
+    height: 50px;
+    background: url(../images/CCE_logoBW.svg) no-repeat center;
+    background-size: cover;
+    display: block;
+}
+
+nav>ul {
+    list-style: none;
+}
+
+nav>ul>li {
+    display: inline-block;
+    padding: 10px
+}
+
+nav>ul>li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 200;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+nav>ul>li a:hover {
+    text-decoration: none;
+}
+
 nav>ul>li a.active {
-    border: 2px solid #fff;
-    padding: 5px;
+    border-bottom: 5px solid #fff;
+    padding-bottom: 5px;
 }
 
 nav>ul>li a:hover,
@@ -104,75 +133,100 @@ nav>ul>li a:focus::after {
 }
 
 
-/* styling the navigation */
+/* ++++++++++++++++++ */
 
 
-/* Styling the slide */
+/* ++++++++++++++++++ */
 
 
-/* slide arrow */
+/* Styling the slider */
 
-.slider {
+.wrap {
     position: relative;
-    display: block;
-    width: 100%;
-    height: 100vh;
-    margin-top: -7.4%;
-    z-index: -9000;
 }
 
-.slider .slidea {
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-}
-
-.slidea {
+.slide {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url(../images/forest-floor-1031143_1920.jpg);
-    overflow: hidden;
 }
 
-.slidea p {
+.slide1 {
+    background-image: url(../images/forest-floor-1031143_1920.jpg);
+}
+
+.slide2 {
+    background-image: url(../images/sunset-1270563_1920.jpg);
+}
+
+.slide3 {
+    background-image: url(../images/offshoredrilling.jpg);
+}
+
+.slide-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-family: "Merriweather";
-    font-size: 4em;
+}
+
+.slide-content span {
+    font-size: 2em;
+    letter-spacing: .1em;
     font-weight: 100;
     color: #fff;
-    margin-top: 20%;
+    font-family: "Merriweather";
 }
 
-.slidea a {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+.slide-content a {
     text-decoration: none;
     font-family: "lato";
     letter-spacing: 2px;
-    font-size: 1em;
+    font-size: 1rem;
     font-weight: 700;
     color: #fff;
-    width: 15%;
-    margin: 2% auto;
+    width: auto;
+    margin: 3% auto 0% auto;
     padding: 20px;
     text-transform: uppercase;
     background-color: #d35400;
-    z-index: 9000;
 }
 
-.slidea a:hover {
+.slide-content>a:hover {
     background-color: #026953;
     transition: all fade-in 1s;
 }
+
+.arrow {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    margin-top: -35px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+#arrow-left {
+    border-width: 20px 30px 20px 0;
+    border-color: transparent #fff transparent transparent;
+    left: 0;
+    margin-left: 10%;
+}
+
+#arrow-right {
+    border-width: 20px 0 20px 30px;
+    border-color: transparent transparent transparent #fff;
+    right: 0;
+    margin-right: 10%;
+}
+
+
+/* ++++++++++++++++++ */
+
+
+/* ++++++++++++++++++ */
 
 
 /* styling Empowering Section  */
@@ -239,7 +293,8 @@ nav>ul>li a:focus::after {
     transform: rotate(360deg);
 }
 
-.icon a {
+
+/* .icon a {
     font-family: "lato";
     letter-spacing: 2px;
     font-size: .7em;
@@ -255,7 +310,13 @@ nav>ul>li a:focus::after {
 .icon a:hover {
     background-color: #026953;
     transition: all fade-in 1s;
-}
+} */
+
+
+/* ++++++++++++++++++ */
+
+
+/* ++++++++++++++++++ */
 
 
 /* Protection section */
@@ -301,6 +362,7 @@ nav>ul>li a:focus::after {
     width: 80%;
     font-family: "Merriweather";
     letter-spacing: 1px;
+    overflow: hidden;
     line-height: 1.2em;
 }
 
@@ -468,6 +530,12 @@ nav>ul>li a:focus::after {
 /* End of Container Mission */
 
 
+/* ++++++++++++++++++ */
+
+
+/* ++++++++++++++++++ */
+
+
 /* ================================== */
 
 
@@ -487,15 +555,15 @@ footer {
 
 .company img {
     width: 30%;
-    margin-left: 15%;
+    margin-left: 10%;
+    margin-right: 15%;
     margin-top: 5px;
 }
 
-.social a:nth-child(1) {
-    margin-left: 7%;
-}
-
-.social a {
+.company a:nth-child(2),
+.company a:nth-child(3),
+.company a:nth-child(4),
+.company a:nth-child(5) {
     color: #fff;
     display: inline-block;
     font-size: 1.5em;
@@ -508,24 +576,13 @@ footer {
     transition: 1s;
 }
 
-.company>p {
-    text-align: left;
-    line-height: .8em;
-    width: 100%;
-    margin-left: 10%;
-}
-
-.company>p:nth-child(1) {
-    padding-top: 2%;
-}
-
 
 /* nav footer */
 
 .nav_footer {
     width: 45%;
     float: right;
-    margin-top: 3%;
+    margin-top: 1.5%;
 }
 
 .nav_footer>a {
@@ -536,7 +593,6 @@ footer {
     color: #fff;
     letter-spacing: 1px;
     font-weight: 400;
-    padding-top: 6px;
     font-size: 1.15em;
 }
 
@@ -582,11 +638,20 @@ footer {
 
 .nav_footer>a.active {
     border: 2px solid #fff;
-    padding: 8px;
+    padding: 3px;
 }
 
 
 /* ================================== */
+
+
+/* ++++++++++++++++++++++++++++++ */
+
+
+/* ++++++++++++++++++++++++++++++ */
+
+
+/* ++++++++++++++++++++++++++++++ */
 
 
 /* About CSS */
@@ -595,15 +660,12 @@ footer {
     position: relative;
     display: block;
     width: 100%;
-    height: 450px;
+    height: 70vh;
     background-image: url(../images/pexels-photo-1181408.jpeg);
-    /* background-size: cover; */
     background-position: center;
-    background-position-y: -300px;
     background-size: cover;
     background-repeat: no-repeat;
-    margin-top: -9.4%;
-    z-index: -9000;
+    /* z-index: -9000; */
 }
 
 .sliderabout>p {
@@ -702,6 +764,7 @@ footer {
     font-weight: 100;
     width: 80%;
     font-family: "Merriweather";
+    overflow: hidden;
     letter-spacing: 1px;
     line-height: 1.2em;
 }
@@ -789,6 +852,12 @@ footer {
 /* ==================================== */
 
 
+/* ==================================== */
+
+
+/* ==================================== */
+
+
 /* Take Action Page */
 
 #countdown {
@@ -807,9 +876,9 @@ footer {
     position: relative;
     background-image: url(../images/african-3382795_1920.jpg);
     background-size: cover;
-    height: 550px;
-    margin-top: -9%;
-    z-index: -4000;
+    overflow: hidden;
+    width: 100%;
+    height: 70vh;
 }
 
 .sea {
@@ -829,8 +898,8 @@ footer {
     font-family: "Merriweather";
     font-size: 4.3em;
     font-weight: 100;
-    color: #fff;
-    padding-top: 19%;
+    color: #026953;
+    padding-top: 13%;
 }
 
 .container_action {
@@ -871,7 +940,7 @@ footer {
 
 .takeaction>p {
     text-align: center;
-    margin: 4% 5%;
+    margin: 5% 10%;
     font-size: 1.2em;
 }
 
@@ -923,16 +992,27 @@ footer {
 /* ==================================== */
 
 
+/* ==================================== */
+
+
+/* ==================================== */
+
+
+/* ==================================== */
+
+
+/* ==================================== */
+
+
 /* Subscribe Page */
 
 .form {
     background-image: url(../images/subscribeimage.jpg);
     background-repeat: no-repeat;
     width: 100%;
+    height: 100vh;
     background-size: cover;
     position: absolute;
-    margin-top: -8.4%;
-    z-index: -3000;
 }
 
 .form form {
@@ -995,75 +1075,3 @@ footer {
 
 
 /* End of Subscribe Page */
-
-
-/* ==================================== */
-
-
-/* ==================================== */
-
-
-/* ==================================== */
-
-
-/* ==================================== */
-
-
-/* ==================================== */
-
-
-/* ==================================== */
-
-
-/* ==================================== */
-
-
-/* ==================================== */
-
-
-/* ==================================== */
-
-
-/* ==================================== */
-
-
-/* ==================================== */
-
-
-/* ==================================== */
-
-
-/* ==================================== */
-
-
-/* ==================================== */
-
-
-/* ==================================== */
-
-
-/* ==================================== */
-
-
-/* ==================================== */
-
-
-/* ==================================== */
-
-
-/* ==================================== */
-
-
-/* ==================================== */
-
-
-/* ==================================== */
-
-
-/* ==================================== */
-
-
-/* ==================================== */
-
-
-/* ==================================== */
